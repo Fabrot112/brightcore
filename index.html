@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="BRIGHT CORE Solar & Electricals provides solar systems, electrical installation, lighting, security and power solutions in Eldoret and across Kenya."
+  >
+  <meta name="theme-color" content="#0B3C5D">
+
+  <title>BRIGHT CORE Solar & Electricals | Clean Power. Smart Living.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Custom SVG favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B3C5D'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23FDB813'/%3E%3Cpath d='M32 8v9M32 47v9M8 32h9M47 32h9M15 15l6 6M43 43l6 6M49 15l-6 6M21 43l-6 6' stroke='%23FF5722' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+  >
+
+  <style>
+    :root {
+      --navy: #0b3c5d;
+      --navy-deep: #062a42;
+      --yellow: #fdb813;
+      --yellow-soft: #fff4d4;
+      --orange: #ff5722;
+      --white: #ffffff;
+      --mist: #f8f9fa;
+      --ink: #172f40;
+      --muted: #647582;
+      --line: #dce4e9;
+      --display: "Outfit", sans-serif;
+      --body: "DM Sans", sans-serif;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(11, 60, 93, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    body.menu-open,
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--orange);
+      font-family: var(--display);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 28px;
+      height: 3px;
+      background: var(--yellow);
+      content: "";
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: clamp(2.15rem, 4vw, 3.65rem);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      line-height: 1.03;
+    }
+
+    .section-copy {
+      max-width: 620px;
+      margin: 19px 0 0;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 51px;
+      padding: 13px 22px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      font-family: var(--display);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: var(--navy);
+      background: var(--yellow);
+      box-shadow: 0 7px 0 #d99600;
+    }
+
+    .btn-primary:hover {
+      background: #ffca38;
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .btn-outline:hover {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    .btn-small {
+      min-height: 40px;
+      padding: 9px 14px;
+      font-size: 0.72rem;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(11, 60, 93, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      min-height: 76px;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      min-width: max-content;
+    }
+
+    .brand-mark {
+      position: relative;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      overflow: hidden;
+      color: var(--navy);
+      background: var(--yellow);
+      border-radius: 50%;
+      font-family: var(--display);
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      position: absolute;
+      width: 60px;
+      height: 5px;
+      background: var(--orange);
+      content: "";
+    }
+
+    .brand-mark::before {
+      transform: rotate(-45deg);
+    }
+
+    .brand-mark::after {
+      transform: rotate(45deg);
+    }
+
+    .brand-mark span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-name {
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 0.98rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 3px;
+      font-family: var(--body);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-left: auto;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .main-nav a:hover {
+      color: var(--orange);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px;
+      color: var(--navy);
+      background: transparent;
+      border: 0;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: 5px;
+      background: currentColor;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background-color: var(--navy);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(6, 42, 66, 0.98) 0%, rgba(11, 60, 93, 0.93) 58%, rgba(11, 60, 93, 0.72) 100%),
+        linear-gradient(rgba(253, 184, 19, 0.11) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(253, 184, 19, 0.11) 1px, transparent 1px);
+      background-size: auto, 38px 38px, 38px 38px;
+      content: "";
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -150px;
+      width: 470px;
+      height: 470px;
+      border: 52px solid var(--yellow);
+      border-radius: 50%;
+      opacity: 0.12;
+      content: "";
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 114px 0 95px;
+    }
+
+    .hero .eyebrow {
+      color: var(--yellow);
+    }
+
+    .hero h1 {
+      max-width: 830px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(3.25rem, 7vw, 6.5rem);
+      font-weight: 900;
+      letter-spacing: -0.075em;
+      line-height: 0.92;
+    }
+
+    .hero h1 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      margin: 27px 0 0;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: clamp(1.06rem, 2vw, 1.24rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 68px;
+    }
+
+    .stat {
+      min-width: 158px;
+      padding-right: 29px;
+      margin-right: 29px;
+      border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--yellow);
+      font-family: var(--display);
+      font-size: 1.55rem;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.88rem;
+    }
+
+    /* Trust bar */
+    .trust-bar {
+      position: relative;
+      z-index: 2;
+      margin-top: -30px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 25px 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--navy);
+      background: var(--yellow-soft);
+      border-radius: 12px;
+      font-family: var(--display);
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 0.9rem;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    /* Services */
+    .services {
+      background: var(--mist);
+    }
+
+    .services-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .services-heading .section-copy {
+      max-width: 390px;
+      margin-bottom: 4px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .service-card {
+      display: flex;
+      min-height: 275px;
+      flex-direction: column;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      display: grid;
+      width: 51px;
+      height: 51px;
+      place-items: center;
+      color: var(--navy);
+      background: var(--yellow);
+      border-radius: 50%;
+      font-family: var(--display);
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .service-card h3 {
+      margin: 21px 0 9px;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 1rem;
+      letter-spacing: -0.035em;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+      line-height: 1.42;
+    }
+
+    .service-card a {
+      margin-top: auto;
+      padding-top: 17px;
+      color: var(--orange);
+      font-family: var(--display);
+      font-size: 0.73rem;
+      font-weight: 800;
+    }
+
+    /* Product highlight */
+    .power-feature {
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .power-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      min-height: 500px;
+    }
+
+    .power-image {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      background: #dce6e9;
+    }
+
+    .power-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .power-label {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      padding: 8px 11px;
+      color: var(--navy);
+      background: var(--yellow);
+      font-family: var(--display);
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .power-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px;
+      background: var(--navy);
+    }
+
+    .power-copy .eyebrow {
+      color: var(--yellow);
+    }
+
+    .power-copy .section-heading {
+      color: var(--white);
+    }
+
+    .power-copy p:not(.eyebrow) {
+      max-width: 530px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .spec-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 0;
+      margin: 26px 0 29px;
+      list-style: none;
+    }
+
+    .spec-list li {
+      display: flex;
+      gap: 9px;
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .spec-list li::before {
+      color: var(--yellow);
+      content: "+";
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    /* Gallery */
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-status {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .gallery-item {
+      position: relative;
+      min-height: 178px;
+      padding: 0;
+      overflow: hidden;
+      background: #e6edef;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .gallery-item::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(6, 42, 66, 0.68), transparent 60%);
+      content: "";
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 178px;
+      object-fit: cover;
+      transition: transform 300ms ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-tag {
+      position: absolute;
+      z-index: 1;
+      right: 10px;
+      bottom: 10px;
+      padding: 5px 8px;
+      color: var(--navy);
+      background: var(--yellow);
+      border-radius: 4px;
+      font-family: var(--display);
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      opacity: 0;
+      text-transform: uppercase;
+      transition: opacity 180ms ease;
+    }
+
+    .gallery-item:hover .gallery-tag {
+      opacity: 1;
+    }
+
+    /* About */
+    .about {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .about::after {
+      position: absolute;
+      top: -140px;
+      right: -80px;
+      width: 440px;
+      height: 440px;
+      border: 44px solid var(--yellow);
+      border-radius: 50%;
+      opacity: 0.1;
+      content: "";
+    }
+
+    .about-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about .eyebrow {
+      color: var(--yellow);
+    }
+
+    .about .section-heading {
+      color: var(--white);
+    }
+
+    .about-copy {
+      max-width: 600px;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .reason-list {
+      display: grid;
+      gap: 15px;
+      padding: 0;
+      margin: 29px 0 0;
+      list-style: none;
+    }
+
+    .reason-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .reason-list li::before {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--navy);
+      background: var(--yellow);
+      border-radius: 50%;
+      content: "+";
+      font-family: var(--display);
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .about-card {
+      padding: 35px;
+      color: var(--navy);
+      background: var(--yellow);
+      border-radius: var(--radius);
+    }
+
+    .quote-mark {
+      display: block;
+      color: var(--orange);
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 0.7;
+    }
+
+    .about-card p {
+      margin: 18px 0 25px;
+      font-family: var(--display);
+      font-size: 1.12rem;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.35;
+    }
+
+    .about-card .btn {
+      color: var(--white);
+      background: var(--navy);
+      box-shadow: none;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.84fr 1.16fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .contact-cards {
+      display: grid;
+      gap: 12px;
+      margin-top: 33px;
+    }
+
+    .contact-card {
+      display: block;
+      padding: 19px 22px;
+      background: var(--mist);
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .contact-card:hover {
+      background: var(--yellow-soft);
+    }
+
+    .contact-card span {
+      display: block;
+      color: var(--orange);
+      font-family: var(--display);
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-top: 3px;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 1rem;
+    }
+
+    .review-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 27px;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .review-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--yellow);
+      border-radius: 50%;
+    }
+
+    .quote-form {
+      padding: 32px;
+      background: var(--mist);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 17px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-family: var(--display);
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid #ccd7de;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.12);
+    }
+
+    .upload-wrap {
+      padding: 12px 14px;
+      background: var(--white);
+      border: 1px dashed #9baeb9;
+      border-radius: 8px;
+    }
+
+    .upload-wrap input {
+      padding: 0;
+      border: 0;
+    }
+
+    .upload-note {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .form-message {
+      display: none;
+      margin: 13px 0 0;
+      color: var(--navy);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .form-message.visible {
+      display: block;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 29px 0 90px;
+      color: rgba(255, 255, 255, 0.7);
+      background: var(--navy-deep);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-copy {
+      margin: 0;
+      font-size: 0.86rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--white);
+      font-family: var(--display);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    /* Clean quote CTA */
+    .quote-float {
+      position: fixed;
+      z-index: 45;
+      right: 20px;
+      bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 49px;
+      padding: 11px 17px;
+      color: var(--white);
+      background: var(--navy);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      box-shadow: 0 12px 28px rgba(3, 29, 45, 0.24);
+      font-family: var(--display);
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .quote-float::before {
+      width: 8px;
+      height: 8px;
+      background: var(--yellow);
+      border-radius: 50%;
+      content: "";
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background: rgba(3, 22, 35, 0.94);
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(100%, 1000px);
+      max-height: 83vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .lightbox-close,
+    .lightbox-nav {
+      position: absolute;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      color: var(--navy);
+      background: var(--yellow);
+      border: 0;
+      border-radius: 50%;
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .lightbox-close {
+      top: 22px;
+      right: 22px;
+    }
+
+    .lightbox-nav.prev {
+      left: 22px;
+    }
+
+    .lightbox-nav.next {
+      right: 22px;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      color: var(--white);
+      font-size: 0.86rem;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 950px) {
+      .main-nav {
+        gap: 14px;
+      }
+
+      .nav-actions .call-btn {
+        display: none;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .power-copy {
+        padding: 45px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        gap: 42px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .container {
+        width: min(100% - 32px, 1160px);
+      }
+
+      .nav-wrap {
+        min-height: 66px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 66px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 13px 20px 20px;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 14px 25px rgba(11, 60, 93, 0.1);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 11px 0;
+      }
+
+      .nav-actions {
+        margin-left: auto;
+      }
+
+      .nav-actions .btn {
+        min-height: 39px;
+        padding: 8px 11px;
+        font-size: 0.67rem;
+      }
+
+      .hero-inner {
+        padding: 78px 0 67px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.4rem);
+      }
+
+      .hero-stats {
+        gap: 20px;
+        margin-top: 52px;
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        padding: 19px 22px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .services-heading,
+      .gallery-head {
+        display: block;
+      }
+
+      .services-heading .section-copy {
+        margin-top: 17px;
+      }
+
+      .gallery-status {
+        margin-top: 14px;
+      }
+
+      .service-grid {
+        gap: 12px;
+      }
+
+      .service-card {
+        min-height: 245px;
+        padding: 19px;
+      }
+
+      .service-card h3 {
+        font-size: 0.9rem;
+      }
+
+      .service-card p {
+        font-size: 0.85rem;
+      }
+
+      .power-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .power-image {
+        min-height: 290px;
+      }
+
+      .power-copy {
+        padding: 42px 25px;
+      }
+
+      .spec-list {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+      }
+
+      .gallery-item,
+      .gallery-item img {
+        min-height: 140px;
+      }
+
+      .about-card {
+        padding: 28px;
+      }
+
+      .quote-form {
+        padding: 22px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .quote-float {
+        right: 13px;
+        bottom: 13px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand-name {
+        font-size: 0.85rem;
+      }
+
+      .gallery-item,
+      .gallery-item img {
+        min-height: 120px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="BRIGHT CORE home">
+        <span class="brand-mark"><span>B</span></span>
+        <span class="brand-name">
+          BRIGHT CORE
+          <small>Solar &amp; Electricals</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-small call-btn" href="tel:0704818805">Call Us</a>
+        <a
+          class="btn btn-primary btn-small"
+          href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%27d%20like%20a%20quote."
+          target="_blank"
+          rel="noopener"
+        >
+          Get a Quote
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="eyebrow">Solar / Electrical / Security</p>
+        <h1>Power that keeps your world <em>bright.</em></h1>
+        <p class="hero-copy">
+          Trusted solar systems, professional electrical installation, and reliable
+          power solutions for homes and businesses across Kenya.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%27d%20like%20a%20quote%20for%20a%20solar%20or%20electrical%20project."
+            target="_blank"
+            rel="noopener"
+          >
+            Get a WhatsApp Quote
+          </a>
+          <a class="btn btn-outline" href="tel:0704818805">Call 0704 818 805</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Core solutions</span>
+          </div>
+          <div class="stat">
+            <strong>Fast</strong>
+            <span>Quote support</span>
+          </div>
+          <div class="stat">
+            <strong>KE</strong>
+            <span>Country-wide supply</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar" aria-label="Why choose BRIGHT CORE">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">OK</span>
+            <div>
+              <strong>Quality Materials</strong>
+              <span>Products selected to perform.</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">KSh</span>
+            <div>
+              <strong>Competitive Prices</strong>
+              <span>Clear quotes, real value.</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">+</span>
+            <div>
+              <strong>Reliable Supply</strong>
+              <span>Ready when your project is.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="services-heading">
+          <div>
+            <p class="eyebrow">What We Do</p>
+            <h2 class="section-heading">Everything your power project needs.</h2>
+          </div>
+
+          <p class="section-copy">
+            From the first cable to dependable backup power, get practical solutions
+            from one knowledgeable team.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon">SUN</span>
+            <h3>Solar Systems</h3>
+            <p>Inverters, batteries and solar panels sized for your needs.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20a%20solar%20system%20%28panels%2C%20inverter%20or%20batteries%29." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">EL</span>
+            <h3>Electrical Installation</h3>
+            <p>Domestic, commercial and industrial electrical works.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20an%20electrical%20installation." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">FIX</span>
+            <h3>Maintenance &amp; Repair</h3>
+            <p>Fast fault finding, repairs and preventative maintenance.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20help%20with%20electrical%20maintenance%20or%20repair." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">SAFE</span>
+            <h3>Safety &amp; Protection</h3>
+            <p>Surge protection, earthing and safer power systems.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20surge%20protection%20or%20earthing." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">DB</span>
+            <h3>Distribution Systems</h3>
+            <p>DB boards, wiring and dependable power distribution.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20a%20DB%20board%20or%20wiring." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">LED</span>
+            <h3>Lighting Solutions</h3>
+            <p>Indoor, outdoor and smart lighting that works beautifully.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20lighting%20solutions." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">CAM</span>
+            <h3>Security Systems</h3>
+            <p>CCTV, access control and alarm solutions for peace of mind.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20CCTV%2C%20alarms%20or%20access%20control." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon">ECO</span>
+            <h3>Renewable Energy</h3>
+            <p>Smarter energy choices for homes and growing businesses.</p>
+            <a href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20need%20a%20quote%20for%20a%20renewable%20energy%20solution." target="_blank" rel="noopener">Request a quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="power-feature">
+      <div class="power-grid">
+        <div class="power-image">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85"
+            alt="Solar panels producing clean energy"
+            loading="lazy"
+          >
+          <span class="power-label">Clean energy, built for you</span>
+        </div>
+
+        <div class="power-copy">
+          <p class="eyebrow">Solar That Works</p>
+          <h2 class="section-heading">Make power cuts a smaller problem.</h2>
+          <p>
+            We help you choose solar equipment that matches your actual power needs,
+            budget and future plans - without unnecessary complexity.
+          </p>
+
+          <ul class="spec-list">
+            <li>Solar panels and mounting</li>
+            <li>Inverters and batteries</li>
+            <li>Load assessment support</li>
+            <li>Installation and supply</li>
+          </ul>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20would%20like%20help%20choosing%20a%20solar%20solution."
+            target="_blank"
+            rel="noopener"
+          >
+            Ask About Solar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="gallery-head">
+          <div>
+            <p class="eyebrow">Gallery</p>
+            <h2 class="section-heading">Work built to shine.</h2>
+            <p class="section-copy">
+              Explore installations, products and power solutions. Select a photo to
+              view it larger.
+            </p>
+          </div>
+
+          <p class="gallery-status" id="gallery-status">Loading gallery...</p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">The Bright Core Difference</p>
+          <h2 class="section-heading">Power expertise, without the power struggle.</h2>
+
+          <p class="about-copy">
+            From a single lighting point to a complete solar backup system, BRIGHT
+            CORE brings the right products, practical guidance and professional
+            execution to every project.
+          </p>
+
+          <ul class="reason-list">
+            <li>Genuine, dependable materials</li>
+            <li>Solutions tailored to your load and budget</li>
+            <li>One team for supply, installation and support</li>
+          </ul>
+        </div>
+
+        <aside class="about-card">
+          <span class="quote-mark">"</span>
+          <p>
+            Tell us what you need. Send a photo, sketch or bill of quantities and
+            we will help you choose the right solution.
+          </p>
+
+          <a
+            class="btn"
+            href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%20would%20like%20to%20share%20my%20project%20details%20or%20attachments%20for%20a%20quote."
+            target="_blank"
+            rel="noopener"
+          >
+            Start a Quote Request
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Get In Touch</p>
+          <h2 class="section-heading">Let us power your next project.</h2>
+          <p class="section-copy">
+            Send your requirements, a photo or a BOQ. We will get back to you with a
+            practical quote.
+          </p>
+
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:0704818805">
+              <span>Call us</span>
+              <strong>0704 818 805</strong>
+            </a>
+
+            <a
+              class="contact-card"
+              href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%27d%20like%20a%20quote."
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Quick quote</span>
+              <strong>Message us on WhatsApp</strong>
+            </a>
+
+            <div class="contact-card">
+              <span>Coverage</span>
+              <strong>Eldoret &amp; Country Wide</strong>
+            </div>
+          </div>
+
+          <a
+            class="review-link"
+            href="https://g.page/r/CSceSQdhpALPEBM/review"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="review-dot"></span>
+            Happy with our service? Rate us on Google
+          </a>
+        </div>
+
+        <form class="quote-form" id="quote-form">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required>
+            </div>
+
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="Solar system">Solar system</option>
+                <option value="Electrical installation">Electrical installation</option>
+                <option value="Repair and maintenance">Repair and maintenance</option>
+                <option value="Safety and power protection">Safety and power protection</option>
+                <option value="Distribution and wiring">Distribution and wiring</option>
+                <option value="Lighting">Lighting</option>
+                <option value="Security system">Security system</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="details">Project details</label>
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Tell us what you need, your location, quantities or useful details."
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="attachment">Attach a photo or BOQ (optional)</label>
+            <div class="upload-wrap">
+              <input id="attachment" name="attachment" type="file" accept="image/*,.pdf,.doc,.docx">
+            </div>
+
+            <span class="upload-note">
+              After your quote message opens, attach the selected file directly in
+              WhatsApp using its attachment button.
+            </span>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send Quote Request</button>
+          <p class="form-message" id="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        Copyright <span id="year"></span> BRIGHT CORE Solar &amp; Electricals.
+        Clean Power. Smart Living.
+      </p>
+
+      <div class="footer-links">
+        <a href="#services">Solar Systems</a>
+        <a href="#services">Electrical Installation</a>
+        <a href="#services">Security Systems</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="quote-float"
+    href="https://wa.me/254704818805?text=Hello%20BRIGHT%20CORE%2C%20I%27d%20like%20a%20quote."
+    target="_blank"
+    rel="noopener"
+    aria-label="Get a quote from BRIGHT CORE on WhatsApp"
+  >
+    Get a Quote
+  </a>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close gallery">X</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image">&lt;</button>
+    <img id="lightbox-image" src="" alt="">
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image">&gt;</button>
+    <span class="lightbox-caption" id="lightbox-caption"></span>
+  </div>
+
+  <script>
+    const whatsappNumber = "254704818805";
+
+    // Set the copyright year automatically.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile navigation.
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      document.body.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Online imagery fills the gallery only when there are fewer than 8 local photos.
+    const onlineFallbackImages = [
+      {
+        src: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=82",
+        alt: "Solar panel array",
+        type: "Inspiration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=82",
+        alt: "Solar energy at sunset",
+        type: "Inspiration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1200&q=82",
+        alt: "Solar energy installation",
+        type: "Inspiration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=82",
+        alt: "Renewable energy landscape",
+        type: "Inspiration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?auto=format&fit=crop&w=1200&q=82",
+        alt: "Modern lighting installation",
+        type: "Inspiration"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=82",
+        alt: "Electrical technician at work",
+        type: "Inspiration"
+      }
+    ];
+
+    const galleryGrid = document.getElementById("gallery-grid");
+    const galleryStatus = document.getElementById("gallery-status");
+    const galleryImages = [];
+    const extensions = ["jpg", "jpeg", "png", "webp"];
+
+    function checkImage(url) {
+      return new Promise((resolve) => {
+        const image = new Image();
+        image.onload = () => resolve(url);
+        image.onerror = () => resolve(null);
+        image.src = url;
+      });
+    }
+
+    async function findLocalImage(number) {
+      for (const extension of extensions) {
+        const path = `./${number}.${extension}`;
+        const imagePath = await checkImage(path);
+
+        if (imagePath) {
+          return imagePath;
+        }
+      }
+
+      return null;
+    }
+
+    function addGalleryImage(imageData) {
+      const button = document.createElement("button");
+      const image = document.createElement("img");
+      const label = document.createElement("span");
+
+      button.className = "gallery-item";
+      button.type = "button";
+      button.setAttribute("aria-label", `View ${imageData.alt}`);
+
+      image.src = imageData.src;
+      image.alt = imageData.alt;
+      image.loading = "lazy";
+
+      label.className = "gallery-tag";
+      label.textContent = imageData.type === "Inspiration" ? "Inspiration" : "View image";
+
+      button.append(image, label);
+      galleryGrid.appendChild(button);
+
+      const currentIndex = galleryImages.length;
+      galleryImages.push(imageData);
+
+      button.addEventListener("click", () => openLightbox(currentIndex));
+    }
+
+    async function setHeroBackground() {
+      const remoteHero = "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85";
+      const localHero = await findLocalImage(1);
+      const heroImage = localHero || remoteHero;
+
+      document.querySelector(".hero").style.backgroundImage = `url("${heroImage}")`;
+    }
+
+    async function loadGallery() {
+      const localImageChecks = [];
+
+      for (let number = 1; number <= 37; number += 1) {
+        localImageChecks.push(findLocalImage(number));
+      }
+
+      const results = await Promise.all(localImageChecks);
+      const localImages = results
+        .map((src, index) => {
+          if (!src) {
+            return null;
+          }
+
+          return {
+            src,
+            alt: `BRIGHT CORE solar and electrical project ${index + 1}`,
+            type: "Project"
+          };
+        })
+        .filter(Boolean);
+
+      localImages.forEach(addGalleryImage);
+
+      if (localImages.length < 8) {
+        const requiredFallbacks = Math.min(8 - localImages.length, onlineFallbackImages.length);
+        onlineFallbackImages.slice(0, requiredFallbacks).forEach(addGalleryImage);
+      }
+
+      const projectCount = localImages.length;
+      const totalCount = galleryImages.length;
+
+      if (projectCount > 0 && projectCount < 8) {
+        galleryStatus.textContent = `${projectCount} BRIGHT CORE project photo${projectCount === 1 ? "" : "s"} plus curated inspiration images.`;
+      } else if (projectCount > 0) {
+        galleryStatus.textContent = `${projectCount} BRIGHT CORE project photo${projectCount === 1 ? "" : "s"} available.`;
+      } else {
+        galleryStatus.textContent = `${totalCount} inspiration images displayed. Add numbered photos to show your completed projects.`;
+      }
+    }
+
+    setHeroBackground();
+    loadGallery();
+
+    // Gallery lightbox.
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    let activeImageIndex = 0;
+
+    function openLightbox(index) {
+      activeImageIndex = index;
+      showLightboxImage();
+      lightbox.classList.add("active");
+      document.body.classList.add("lightbox-open");
+    }
+
+    function showLightboxImage() {
+      const image = galleryImages[activeImageIndex];
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = `${activeImageIndex + 1} of ${galleryImages.length} - ${image.type}`;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.classList.remove("lightbox-open");
+    }
+
+    function moveLightbox(direction) {
+      if (!galleryImages.length) {
+        return;
+      }
+
+      activeImageIndex = (activeImageIndex + direction + galleryImages.length) % galleryImages.length;
+      showLightboxImage();
+    }
+
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev").addEventListener("click", () => moveLightbox(-1));
+    document.getElementById("lightbox-next").addEventListener("click", () => moveLightbox(1));
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("active")) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "ArrowLeft") {
+        moveLightbox(-1);
+      }
+
+      if (event.key === "ArrowRight") {
+        moveLightbox(1);
+      }
+    });
+
+    // Build a prefilled WhatsApp quote request.
+    const quoteForm = document.getElementById("quote-form");
+    const attachment = document.getElementById("attachment");
+    const formMessage = document.getElementById("form-message");
+
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const service = document.getElementById("service").value;
+      const details = document.getElementById("details").value.trim();
+      const hasAttachment = attachment.files.length > 0;
+
+      const message = [
+        "Hello BRIGHT CORE, I'd like a quote.",
+        "",
+        `Name: ${name}`,
+        `Service: ${service}`,
+        `Details: ${details || "Not provided"}`,
+        "",
+        hasAttachment
+          ? `I have an attachment (${attachment.files[0].name}) and will send it in this chat.`
+          : "I do not have an attachment at the moment."
+      ].join("\n");
+
+      if (hasAttachment) {
+        formMessage.textContent = "Your quote chat will open now. Attach your selected file using the paperclip or plus button in WhatsApp.";
+        formMessage.classList.add("visible");
+      } else {
+        formMessage.classList.remove("visible");
+      }
+
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
